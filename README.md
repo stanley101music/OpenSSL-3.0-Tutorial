@@ -34,9 +34,9 @@ The defalut installation options for ```Strawberry Perl``` and ```NASM``` is suf
     * PVKKDF
 * Configuration to enable legacy provider
   * File path
-    * ```openssl-master\apps\openssl.cnf``` (For linux)
-    * ```openssl-master\apps\openssl-vms.cnf``` (For windows)
-    * ```openssl-master``` is the directory download from Openssl github
+    * ```openssl-master\apps\openssl.cnf``` (For Linux)
+    * ```openssl-master\apps\openssl-vms.cnf``` (For Windows)
+    * ```openssl-master``` is the directory downloaded from OpenSSL github
   * File content
     ```cnf
     openssl_conf = openssl_init
@@ -154,7 +154,7 @@ We also need ```Crypt32.lib``` and ```Ws2_32.lib``` from microsoft system librar
 ```
 
 ## Example
-I've included some common cryptography algorithm examples using openssl libraries' high level API. Check out [symmetric cipher template](./template.cpp) to write your own symmetric cryptography program with minor modification. Moreover, I've included the exmaple using ```RSA``` as an example of asymetric cipher.
+I've included some common cryptography algorithm examples using openssl libraries' high level API. Check out [symmetric cipher template](./template.cpp) to write your own symmetric cryptography program with minor modification. Moreover, I've included the usage of ```RSA``` as an example of asymmetric cipher.
 
 ## Credits
 * I've learned most of the setups from [TroubleChute](https://www.youtube.com/channel/UCkih2oVTbXPEpVwE-U7kmHw)'s tutorial video, including the scripts for automatically built
