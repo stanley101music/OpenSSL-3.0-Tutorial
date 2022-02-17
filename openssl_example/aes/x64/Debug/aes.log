@@ -1,0 +1,2 @@
+﻿  Source.cpp
+C:\Users\stanl\OneDrive\桌面\openssl_example\aes\Source.cpp(2,10): fatal error C1083: 無法開啟包含檔案: 'openssl/conf.h': No such file or directory
