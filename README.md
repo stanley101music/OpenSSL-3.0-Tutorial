@@ -174,3 +174,5 @@ I've included some common cryptography algorithm examples using openssl librarie
 * [Default OpenSSL 3.0 RSA decryption implementation](https://www.openssl.org/docs/man3.0/man3/EVP_PKEY_decrypt.html)
 * [Official Notes for Windows platforms](https://github.com/openssl/openssl/blob/master/NOTES-WINDOWS.md)
 * [Build statically with legacy provider](https://github.com/openssl/openssl/issues/17679)
+* [EVP Symmetric Encryption and Decryption](https://wiki.openssl.org/index.php/EVP_Symmetric_Encryption_and_Decryption)
+* [EVP](https://wiki.openssl.org/index.php/EVP)
