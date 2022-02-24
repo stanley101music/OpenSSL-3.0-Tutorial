@@ -127,6 +127,8 @@ The defalut installation options for ```Strawberry Perl``` and ```NASM``` is suf
   nmake test
   nmake install_sw
   ```
+* ```no-shared no-module```
+  * These options are necessary to build a static library with legacy provider
 ## Include OpenSSL libraries in Visual Studio
 ### Project configure
 ![](img/proj_conf.png)
@@ -148,10 +150,14 @@ The defalut installation options for ```Strawberry Perl``` and ```NASM``` is suf
 #include <openssl/rand.h>
 ```
 We also need ```Crypt32.lib``` and ```Ws2_32.lib``` from microsoft system libraries
-```c
-#pragma comment(lib, "crypt32")
-#pragma comment(lib, "ws2_32.lib")
-```
+* Includes them programmatically and dynamically
+  ```c
+  #pragma comment(lib, "crypt32")
+  #pragma comment(lib, "ws2_32.lib")
+  ```
+* Link statically
+  ![](img/ms_lib.png)
+  * ```[專案] -> [屬性] -> [連結器] -> [輸入] -> [其他相依性] -> [Add ws2_32.lib and crypt32.lib]```
 
 ## Example
 I've included some common cryptography algorithm examples using openssl libraries' high level API. Check out [symmetric cipher template](./template.cpp) to write your own symmetric cryptography program with minor modification. Moreover, I've included the usage of ```RSA``` as an example of asymmetric cipher.
@@ -166,3 +172,5 @@ I've included some common cryptography algorithm examples using openssl librarie
 * [Encrypting/Decrypting a file using OpenSSL EVP](https://medium.com/@amit.kulkarni/encrypting-decrypting-a-file-using-openssl-evp-b26e0e4d28d4)
 * [Default OpenSSL 3.0 RSA encryption implementation](https://www.openssl.org/docs/man3.0/man3/EVP_PKEY_encrypt_init_ex.html)
 * [Default OpenSSL 3.0 RSA decryption implementation](https://www.openssl.org/docs/man3.0/man3/EVP_PKEY_decrypt.html)
+* [Official Notes for Windows platforms](https://github.com/openssl/openssl/blob/master/NOTES-WINDOWS.md)
+* [Build statically with legacy provider](https://github.com/openssl/openssl/issues/17679)
